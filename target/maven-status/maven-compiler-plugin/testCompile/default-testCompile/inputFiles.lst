@@ -1,0 +1,10 @@
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/TestSecurityConfig.java
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/controller/ControllerTestBase.java
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/controller/card/AdminCardControllerTest.java
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/controller/card/PrivateCardControllerTest.java
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/controller/user/AdminUserControllerTest.java
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/controller/user/AuthControllerTest.java
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/controller/user/PrivateUserControllerTest.java
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/service/card/CardOperationServiceTest.java
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/service/card/CardPrivateServiceTest.java
+/Users/nikitadova/IdeaProjects/Bank_REST/src/test/java/com/example/bankcards/service/user/UserOperationServiceTest.java

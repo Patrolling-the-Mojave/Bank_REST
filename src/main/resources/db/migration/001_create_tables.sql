@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS roles(
     name VARCHAR(20) NOT NULL UNIQUE
 );
 
+CREATE INDEX idx_roles_name ON roles(name);
+
 CREATE TABLE IF NOT EXISTS user_roles(
     user_id UUID NOT NULL,
     role_id UUID NOT NULL,
@@ -22,10 +24,11 @@ CREATE TABLE IF NOT EXISTS user_roles(
 
 CREATE TABLE IF NOT EXISTS cards (
     id UUID PRIMARY KEY,
-    number_encrypted VARCHAR(255) NOT NULL UNIQUE,
+    encrypted_number VARCHAR(255) NOT NULL UNIQUE,
     owner_id UUID NOT NULL,
+    expiry_date DATE NOT NULL,
     status VARCHAR(20) NOT NULL DEFAULT 'ACTIVE',
-    balance DECIMAL(19, 4) NOT NULL DEFAULT 0.0,
+    balance NUMERIC(19, 4) NOT NULL DEFAULT 0.0,
     CONSTRAINT fk_cards_owner_id FOREIGN KEY (owner_id) REFERENCES users (id)
 );
 
@@ -36,7 +39,7 @@ CREATE TABLE IF NOT EXISTS transactions(
     id UUID PRIMARY KEY,
     from_card_id UUID NOT NULL,
     to_card_id UUID NOT NULL,
-    amount DECIMAL(19,4) NOT NULL,
+    amount NUMERIC(19,4) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_trans_from FOREIGN KEY (from_card_id) REFERENCES cards (id),
     CONSTRAINT fk_trans_to FOREIGN KEY (to_card_id) REFERENCES cards (id)

@@ -3,8 +3,8 @@ spring:
     name: Bank_REST
   datasource:
     url: jdbc:postgresql://localhost:5432/bank_db
-    username: postgres
-    password: postgres
+    username: user
+    password: 12345
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -19,3 +19,14 @@ spring:
   liquibase:
     enabled: true
     change-log: classpath:db/migration/db.changelog-master.xml
+  logging:
+    level:
+      root: DEBUG
+
+app:
+  encryption:
+    key: BankRestApp
+  jwt:
+    secret: BankRestAppJwtSecret
+    expiration: 900000
+    refresh-expiration: 604800000

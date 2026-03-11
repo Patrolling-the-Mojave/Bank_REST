@@ -1,0 +1,10 @@
+com/example/bankcards/TestSecurityConfig.class
+com/example/bankcards/service/user/UserOperationServiceTest.class
+com/example/bankcards/controller/card/AdminCardControllerTest.class
+com/example/bankcards/controller/user/AdminUserControllerTest.class
+com/example/bankcards/controller/user/AuthControllerTest.class
+com/example/bankcards/service/card/CardOperationServiceTest.class
+com/example/bankcards/controller/card/PrivateCardControllerTest.class
+com/example/bankcards/service/card/CardPrivateServiceTest.class
+com/example/bankcards/controller/user/PrivateUserControllerTest.class
+com/example/bankcards/controller/ControllerTestBase.class
